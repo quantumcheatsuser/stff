@@ -6345,7 +6345,7 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
     end)
 
     antivotekick:AddButton("Copy YouTube Tutorial Link", function()
-        setclipboard("https://youtu.be/dvyiz8iVe5g")
+        setclipboard("https://pornhub.com")
     end)
 
     chatspam:AddToggle("Enabled", false, getCallback("Chat Spam%%Enabled")):AddKeyBind(nil, "Key Bind")
@@ -6375,8 +6375,8 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
     cheatSettings:AddToggle("Save Last Config", true, getCallback("Cheat Settings%%Save Last Config"))
     cheatSettings:AddToggle("Show Keybind List", false, getCallback("Cheat Settings%%Show Keybind List"))
     cheatSettings:AddToggle("Show Key Name", false, getCallback("Cheat Settings%%Show Key Name"))
-    cheatSettings:AddButton("Copy Discord Invite", function()
-        setclipboard("https://discord.gg/tUEJZYvF9d") -- pro
+    cheatSettings:AddButton("Copy Pro Invite", function()
+        setclipboard("https://pornhub.com") -- pro
     end)
     cheatSettings:AddButton("Unload", function()
         unloadMain()
