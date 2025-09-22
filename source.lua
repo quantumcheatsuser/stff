@@ -1,38 +1,12 @@
---[[
 
-    ~ New Discord Server ~
 
-    [ https://discord.gg/tUEJZYvF9d ]
-
-    ~ Index ~
-
-    [ Drawing Library ] - [ Line 111 ]
-    [ UI Library ] - [ Line 1117 ]
-    [ Cham Library ] - [ Line 2710 ]
-    [ Main Cheat ] - [ Line 2766 ]
-    [ Make UI ] - [ Line 5778 ]
-
-    ~ Credits ~
-
-    [ iRay ] - [ @896378803868295178 ] | Lead developer
-    [ ipufo ] - [ @819756897543389184 ] | Took over development since 5/19/2025
-    [ Mickey ] - [ @953720095811719208 ] | Developed perfect trajectory function and ESP library
-    [ Redpoint ] - [ @418013390024474624 ] | Contributed to triangles in the custom drawing api
-
-    ~ Special Thanks ~
-
-    [ BBot ] - [ Inspiration to make such a nice UI and high quality/quantity feature list ]
-    [ Legacy ] - [ Best and only beta tester ]
-
-]]
-
-function LPH_NO_VIRTUALIZE(fuction) -- unnecessary now
+function LPH_NO_VIRTUALIZE(fuction)
     return fuction
 end
 LPH_JIT_MAX = LPH_NO_VIRTUALIZE
 
 local devMode = true
-local defaultUIName = "Wapus" -- $$$
+local defaultUIName = "bbot" -- $$$
 local folderName = "Phantom Forces Cheat"
 local connectionList = {}
 local callbackList = {}
@@ -70,11 +44,10 @@ if isfolder(folderName) and isfolder(folderName .. "/cache") and isfolder(folder
 
     local clientEvents = debug.getupvalue(debug.getupvalue(network._init, 2), 2)
 
-    game:GetService("RunService"):Set3dRenderingEnabled(false) -- increase performance              bruh why this doesnt work on nihon idk if it works on other executors
+    game:GetService("RunService"):Set3dRenderingEnabled(false)
 
     local function isKickInProgress()
-        return debug.getupvalue(votekick.vote, 1) -- fuck you guy
-    end
+        return debug.getupvalue(votekick.vote, 1) 
 
     local console = clientEvents.console
     function clientEvents.console(message)
@@ -85,7 +58,7 @@ if isfolder(folderName) and isfolder(folderName .. "/cache") and isfolder(folder
 
                 repeat task.wait() until isKickInProgress()
 
-                if victim == hostName then -- meanie tried to votekick u
+                if victim == hostName then 
                     votekick.vote("no")
                 elseif initiator == hostName then
                     votekick.vote("yes") -- troll
@@ -108,7 +81,7 @@ if isfolder(folderName) and isfolder(folderName .. "/cache") and isfolder(folder
 end
 
 LPH_NO_VIRTUALIZE(function()
-workspace:FindFirstChild("nigga stop deobfuscating my script you black monkey nigger - iray") -- theres this bitch nigga named isse (@723741691583922209)
+workspace:FindFirstChild("nigga stop deobfuscating my script you black monkey nigger - vitin02") -- theres this bitch nigga named isse (@723741691583922209)
 do -- Drawing Library
     local drawing = {}
     local cache = {
@@ -6006,7 +5979,7 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
     local title
     if isfile(folderName .. "/theme.json") then
         local userThemeData = httpService:JSONDecode(readfile(folderName .. "/theme.json"))
-        title = (userThemeData.Title == "Wapus" and "Wapus.Shop") or userThemeData.Title
+        title = (userThemeData.Title == "Beanbot" and "Beanbot") or userThemeData.Title
         wapus.theme = {
             accent = Color3.fromRGB(table.unpack(userThemeData["Accent Color"])),
             text = Color3.fromRGB(table.unpack(userThemeData["Text Color"])),
@@ -6371,10 +6344,7 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
         writefile(folderName .. "/cache/votekick data/" .. fileName, userName)
     end)
 
-    antivotekick:AddButton("Copy YouTube Tutorial Link", function()
-        setclipboard("https://youtu.be/dvyiz8iVe5g")
-    end)
-
+  
     chatspam:AddToggle("Enabled", false, getCallback("Chat Spam%%Enabled")):AddKeyBind(nil, "Key Bind")
     chatspam:AddDropdown("Spam List", "default.txt", chatListsFiles, getCallback("Chat Spam%%Spam List"))
     chatspam:AddSlider("Spam Delay", 2.51, 2.51, 5, 0.01, " Seconds", getCallback("Chat Spam%%Spam Delay"))
@@ -6402,8 +6372,8 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
     cheatSettings:AddToggle("Save Last Config", true, getCallback("Cheat Settings%%Save Last Config"))
     cheatSettings:AddToggle("Show Keybind List", false, getCallback("Cheat Settings%%Show Keybind List"))
     cheatSettings:AddToggle("Show Key Name", false, getCallback("Cheat Settings%%Show Key Name"))
-    cheatSettings:AddButton("Copy Discord Invite", function()
-        setclipboard("https://discord.gg/tUEJZYvF9d") -- pro
+    cheatSettings:AddButton("Copy Pro Link", function()
+        setclipboard("www.pornhub.com/") -- pro
     end)
     cheatSettings:AddButton("Unload", function()
         unloadMain()
