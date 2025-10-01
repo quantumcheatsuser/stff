@@ -6184,6 +6184,7 @@ LPH_NO_VIRTUALIZE(function() -- Make UI
     knifebot:AddToggle("Only When Holding Knife", false, getCallback("Knife Bot%%Only When Holding Knife"))
     knifebot:AddToggle("Only Kill Target Status", false, getCallback("Knife Bot%%Only Kill Target Status")):AddKeyBind(nil, "Terget Key Bind")
     knifebot:AddToggle("Whitelist Friendly Status", true, getCallback("Knife Bot%%Whitelist Friendly Status")):AddKeyBind(nil, "Friendly Key Bind")
+ knifebot:AddToggle("Kick All (EXPLOIT)", false, getCallback("Knife Bot%%Kill All (May Despawn)")):AddKeyBind(nil, "Key Bind")
 
     antiaim:AddToggle("Enabled (May Cause Despawning)", false, getCallback("Anti Aim%%Enabled (May Cause Despawning)"))-- :AddKeyBind(nil, "Key Bind") broken
     antiaim:AddToggle("Yaw", false, getCallback("Anti Aim%%Yaw"))
